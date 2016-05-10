@@ -20,4 +20,8 @@ PHP 5.6 Dockerfile.
 $ docker build -t php5.6 -f Dockerfile .
 ```
 
+## Pull from docker hub
 
+```
+$ docker pull appleboy/php5.6-docker
+```
