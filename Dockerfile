@@ -41,6 +41,9 @@ RUN sed -i "s/;cgi.fix_pathinfo=1/cgi.fix_pathinfo=0/" /etc/php5/cli/php.ini
 RUN sed -i "s/;date.timezone =.*/date.timezone = Asia\/Taipei/" /etc/php5/cli/php.ini
 RUN php5enmod mcrypt
 
+# clear cache.
+RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
 # Add nginx volumes
 VOLUME ["/var/www"]
 
